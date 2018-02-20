@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import LecturerListItem from '../LecturerListItem/LecturerListItem';
 
@@ -32,6 +33,8 @@ export default class LecturerListView extends React.Component {
         {!this.state.isLoading && (
           <div>
             <h1 className="ui header">Lecturers</h1>
+            <Link to="/lecturers/create" className="ui teal button">Add lecturer</Link>
+            <div className="ui divider" />
             <table className="ui celled table">
               <thead>
                 <tr>
